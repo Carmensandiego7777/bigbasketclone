@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>         
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="<KEY>" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-tJcc9xu8Nmn7u2QXv1P6e8Mh5/jT7byr+2IqjA7uWlK3CfGqZBLXZfcf6v1G7oZou7R7aSlYaiTiZY2e4W2+SQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="apply.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+
+    <div class="w-100">
+        <nav class="navbar" id="navbar1">
+            <div class="green-line"></div>
+            <!-- 
+                
+                Content for the first navbar -->
+                <div class="container w-80 min-h-96" style="padding-top: 0px;">
+                    <div class="navdiv" style="padding-top: 0px;">
+                    <ul class="top_nav">
+                        <li class="make-box" style="padding-left: 0;margin-right: 20px;"><img src="https://asset.brandfetch.io/idIM18oaEt/idnUr2C08_.svg" alt="bigbasket" style="width: 80px;"></li>
+                        <li><div class="search d-flex" style="margin-right: 30px;margin-right: 20px;">
+                            <input
+                                type="search"
+                                id="search-input"
+                                class="search-input"
+                                placeholder="Search for Products..."
+                            />
+                            <img
+                                class="search-logo flex"
+                                src="/images/search.png"
+                            /></li>
+                        <!--working area-->
+                        <li class="make-box dropdowns" style="background-color: #eeeeee; padding: 0px;">
+                            <div style="display: flex; align-items: center; padding: 7px;">
+                                <img src="assets/searchcompass.png" alt="" style="margin-right: 10px; width: 17px;">
+                                <span>select location</span>
+                            </div>
+                        </li>
+                        
+
+                        <div id="overlay"></div>
+
+                        <div class="dropdown-contents" style="display: none; width: 270px; height: 140px;background-color: #ffffff;">
+                            <div class="bottom-element" style="margin: 0;padding: 0;">
+                                <div style="width: 270px;height: 100px;background-color: #eeeeee;margin: 0;padding: 0;">
+                                <p style="font-weight: 600;color: black;padding-left: 15px;padding-top: 25px;font-size: 13px;">Select a location for delivery</p>
+                            <p style="font-size: 10px; padding-left: 15px;padding-right: 8px;">Choose your address location to see product availability and delivery options</p></div>
+                                <div class="search d-flex" style="padding: 10px;">
+                                    <input style="margin-bottom: 0px;" type="search" id="search-inputs" class="search-inputs" placeholder="Search for Products..." />
+                                    <img class="search-logo flex" src="/images/search.png" />
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        
+                    </li>
+                        <!-- Close button outside the modal 
+                            <button id="closeButton" style="position: fixed; top: 10px; right: 10px; z-index: 10000;">Close</button>-->
+
+                            <!-- The modal box -->
+                            <div id="modal" class="modal"style="padding: 0px;margin: 0;background-color:#000000; border-radius:5px">
+                                <div class="row m-0">
+                                    <div class="col-12 col-md-6 p-0">
+                                        <img src="assets/login.png" class="img-fluid" style="height: 300px;" alt="Login Image">
+                                    </div>
+                                    <div class="col-12 col-md-6 p-3">
+                                        <p style="font-weight: 800; font-size: 20px;color:#fff">Login/ Sign up</p>
+                                    
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" style="width: 100px; height: 35px; border-radius: 4px;">
+                                    </div>
+                                    <button type="button" class="btn btn-crimson" style="width: 100px; height: 35px;margin-bottom: 150px;">Continue</button>
+                                    <p style="margin-top: 20px;">By continuing, I accept TCP - bigbasket’s Terms and Conditions & Privacy Policy
+
+                                        This site is protected by reCAPTCHA and the Google - Privacy Policy and & Terms of Service apply.</p>
+                                </div>
+
+                                </div>
+                            </div>
+
+                            <li class="make-box" id="loginSignupButton" style="background-color: #202020;line-height: 0.8;text-align: center;margin-left: 18px;font-size: 12px;">
+                                <div class="px-2 text-white">Login/Sign up</div>
+                            </li>
+
+                        <li class="make-box" style="background-color: #fae6e6;margin-left: 10px;"><img src="assets/basket.png" style="width: 24px;height: 24px; border-radius: 50%;" alt=""></li>
+                    </ul>
+                    <ul class="bottom_nav">
+                        <li class="ex-dropdown" style="width: 120px;">
+                            <p>
+                                <span class="shop-by">Shop by</span><br>Category
+                            </p>
+                            <img src="assets/dropdown.png" class="dropdown-icon" alt="">
+                            <div class="category-container">
+                                <div class="category-main d-flex">
+                                    <ul class="category-main-item">
+                                        <li>Fruits & Vegetables</li>
+                                        <li>Foodgrains, Oil & Masala</li>
+                                        <li>Bakery, Cakes & Diary</li>
+                                        <li>Beverages</li>
+                                        <li>Snacks & Branded Foods</li>
+                                        <li>Beauty & Hygiene</li>
+                                        <li>Cleaning & Household</li>
+                                        <li>Kitchen , Garden & Pets</li>
+                                        <li>Eggs, Meat & Fish</li>
+                                        <li>Gourmet & World Food</li>
+                                        <li>Baby Care</li>
+                                        <li>Paan Corner</li>
+                                    </ul>
+                                    <ul class="category-sub-1">
+                                        <li>Cuts & Sprouts</li>
+                                        <li>Exotic Fruits & Veggies</li>
+                                        <li>Flower Bouquets, Bunches</li>
+                                        <li>Fresh Fruits</li>
+                                        <li>Fresh Vegetables</li>
+                                        <li>Herbs & Seasoning</li>
+                                        <li>Organic Fruits & Vegetables</li>
+                                    </ul>
+        
+                                    <ul class="category-sub-2">
+                                        <li>Cut & Peeled Veggies</li>
+                                        <li>Cut Fruit, Tender Coconut</li>
+                                        <li>Fresh Juices & Milkshakes</li>
+                                        <li>Fresh Salads & Sprouts</li>
+                                        <li>Recipe Packs</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>                        
+                        
+                        
+                        <li><a href="#"><span>Exotic Fruits V..</span></a></li>
+                        <li><a href="#">Tea</a></li>
+                        <li><a href="#">Ghee</a></li>
+                        <li><a href="#">Nandini</a></li>
+                        <li class="dropdown">>></li>
+                            <div class="dropdown-content">
+                                <div class="dropdown-item"><a href="#">Kelloggs</a></div>
+                                <div class="dropdown-item"><a href="#">Milk</a></div>
+                                <div class="dropdown-item"><a href="#">Yogurt & Shrikhand</a></div>
+                                <div class="dropdown-item"><a href="#">Chocolates</a></div>
+                                <div class="dropdown-item"><a href="#">Cup Noodles</a></div>
+                                <div class="dropdown-item"><a href="#">Hair Care</a></div>
+                                <div class="dropdown-item"><a href="#">Fresh Chicken</a></div>
+                                <div class="dropdown-item"><a href="#">Eggs</a></div>
+                            </div>
+
+                        <li><div style="position: absolute;">
+                            <div style="margin-top: -20px;position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; height: 25px; background-color: #eeeeee; margin-left: 30px;"></div>
+                        </div></li>
+                        <li style="margin-left: 60px;"><img src="assets/Smart_basket.png" alt=""></li>
+                        <li style="margin-left: 20px;"><img src="https://www.bigbasket.com/media/uploads/banner_images/hp_cmc_m_offer_28_220921_all.png" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        
+        </nav>
+    </div>
+    
+ 
+<img src="assets/two-tone-ink-cloud.webp" alt="">
+<img src="assets/two-tone-ink-cloud.webp" alt="">
+<img src="assets/two-tone-ink-cloud.webp" alt="">
+<img src="assets/two-tone-ink-cloud.webp" alt="">
+<img src="assets/two-tone-ink-cloud.webp" alt="">
+<script src="custom.js"></script>
+
+</body>
+</html>
+
+<!--</nav>
+        <nav class="navbar" id="navbar2">
+            
+            <div class="container min-h-96">
+                <div class="green-line"></div>
+                <div class="navdiv">
+                    <ul class="">
+                        <li><img src="https://asset.brandfetch.io/idIM18oaEt/idnUr2C08_.svg" alt="bigbasket" width="100"></li>
+                        <li class="category">Shop by Category</li>
+                        <li><input type="text" class="search-bar" placeholder="Search..."></li>
+                        <li>select location</li>
+                      
+                    </ul>
+                    
+                </div>
+            </div>
+        
+        </nav>-->

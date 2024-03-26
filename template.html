@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="<KEY>"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="apply.css" />
+    <link rel="stylesheet" href="assets/style.css">
+  </head>
+  <body>
+    <div class="my-smart-basket">
+
+    
+    <div
+      style="
+        width: 225px;
+        height: 493px;
+        border: 1px solid white;
+        overflow: hidden;
+      "
+    >
+    <div id="content3" style="transform: translateY(0); transition: transform 500ms; background-color: #ffffff;">
+      <div class="basket-item" >
+  <div class="basket-item-image-container">
+      <img
+          src="https://www.bigbasket.com/media/uploads/p/m/10000025_27-fresho-banana-robusta.jpg?tr=w-1920,q=80"
+          alt="basket Item Image"
+          class="basket-item-image"
+      />
+      <p class="basket-item-discount">40% OFF</p>
+      <div class="basket-item-image-type-cntr">
+          <div class="basket-item-image-type"></div>
+      </div>
+  </div>
+  <div class="basket-item-detail-container">
+      <p class="basket-item-detail-brand">Fresho</p>
+      <p class="basket-item-detail-name">Banana - Robusta</p>
+      <select
+          name="basket-item-quantity"
+          id="basket-item-detail-quantity-select" 
+          class="basket-item-detail-quantity"
+      >
+          <option class="basket-item-quantity-select-option">1 Kg
+              <!-- <div class="basket-item-quantity-value-cntr">
+          <p class="basket-item-quantity-value">250g</p>
+                      <i class="fa-solid fa-check"></i>
+                  </div>
+                  <div class="basket-item-quantity-detail">
+                      <div class="basket-item-quantity-discount">${
+                          discount[i]
+                      }% OFF</div>
+                      <p class="basket-item-quantity-price">${price[i]}</p>
+                      <p class="basket-item-quantity-discount-price">${parseFloat(
+                          (price[i] * 100) / (100 - discount[i])
+                      ).toFixed(2)}</p>
+                      <button class="basket-item-quantity-button">Add</button>
+                      </div> -->
+          </option>
+      </select>
+      <div class="basket-item-detail-price-cntr d-flex flex-row" style="align-items:center;">
+      <p class="basket-item-quantity-price" style="padding:0.2rem;margin:0">&#8377;29</p>
+      <p class="basket-item-quantity-discount-price" style="margin:0">&#8377;47.95</p>
+      </div>
+  </div>
+  <div class="basket-item-offer-butto" onclick="moveElementsUp()">
+      <img src="assets/super-sale.png" style="height: 24px;width: 24px;" alt="">
+      <p>Get it for &#8377;25</p>
+  </div>
+  <br />
+  <div style="margin-top: 50px;" >
+      <p class="basket-item-detail-brand">Fresho</p>
+      <p class="basket-item-detail-name">Banana - Robusta</p>
+      <div class="basket-item-scroll-price-container d-flex align-items-center" >
+      <p class="basket-item-quantity-price" style="padding:0.2rem;margin:0">&#8377;29</p>
+      <p class="basket-item-quantity-discount-price" style="margin:0">&#8377;47.95</p>
+      </div>
+      <div class="basket-item-scroll-contai" style="background-color: #fae5e5;margin:5px;margin-top: 40PX;border-radius: 5px;margin-bottom: 60px;">
+        <button class="close_btn" style="border-radius: 50%;width: 24px; height:24 px;background-color:grey; right:10px;margin-bottom:390px ; color:white">X</button>
+          <div class="basket-item-scroll-function">
+              <img
+                  class="basket-item-scroll-container-img"
+                  src="assets/super-sale.png"
+                  alt=""
+                  style="width: 50px; height: 50px;margin-top: -22px;"
+              />
+              
+          </div>
+          <div class="supersaverAnimatio"><p>supersaver!</p></div>
+          <div class="getItem">
+              <p><b>Get it for &#8377;25</b></p>
+              <p>
+                  Buy items worth <b>&#8377;1500</b> to get this product at a
+                  supersaver price for <b>&#8377;800</b>
+              </p>
+              <img style="width: 120px ;" src="assets/red-gift.png" alt="">
+
+          </div>
+      </div>
+  </div>
+  </div>
+</div>
+  <div class="item-count-button" style="margin-bottom: 100px;background-color: transparent;">
+      <button class="wishlist">
+              <img src="assets/bookmark.png" style="height: 24px;" alt="">
+      </button>
+      <div class="add-items-button-container">
+          <button style="width:10rem;right: 0;height: 32px;" class="add-items">Add</button>
+          <div class="count-container additional-button-container">
+              <button class="remove-product">-</button>
+              <p class="count-of-item">1</p>
+              <button class="add-product">+</button>
+          </div>
+      </div>
+  </div>
+  <script>
+      function moveElementsUp() {
+        var contentContainer = document.getElementById("content3");
+        const newPosition = contentContainer.style.transform.match(/\d/)[0];
+        const height =-500;
+        console.log(newPosition);
+        if (newPosition == 0) {
+          contentContainer.style.transform = `translateY(${height}px)`;
+          contentContainer.classList.add("supersaverAnimatio");
+        } else {
+          contentContainer.style.transform = "translate(0)";
+        }
+      }
+      const closebtn = document.querySelector(".close_btn");
+      closebtn.onclick = function () {
+        var contentContainer = document.getElementById("content3");
+        contentContainer.style.transform = "translate(0)";
+      };
+    </script>
+
+    </div>
+    <script>
+      function moveElementsUp() {
+        var contentContainer = document.getElementById("content3");
+        const newPosition = contentContainer.style.transform.match(/\d/)[0];
+        const height =-5000;
+        console.log(newPosition);
+        if (newPosition == 0) {
+          contentContainer.style.transform = `translateY(${height}px)`;
+        } else {
+          contentContainer.style.transform = "translate(0)";
+        }
+      }
+      const closebtn = document.querySelector(".close_btn");
+      closebtn.onclick = function () {
+        var contentContainer = document.getElementById("content3");
+        contentContainer.style.transform = "translate(0)";
+      };
+    </script>
+</div>
+    <script src="custom.js"></script>
+  </body>
+</html>

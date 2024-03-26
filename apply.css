@@ -1,0 +1,530 @@
+.navbar {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  box-shadow: 0px 10px 15px 0px #e6e6e6;
+  transition: all 0.3s ease;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1000;
+  padding: 0;
+   
+}
+
+.navbar.hidden {
+  display: none;
+}
+
+.navdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navdiv,
+li {
+  list-style: none;
+  padding: 0;
+  display: inline-block;
+  margin-top: -5px;
+}
+
+.green-line {
+  height: 4px;
+  background-color: #5e9400;
+  width: 100%;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.make-box {
+  height: 35px;
+  padding: 6px;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+.top_nav {
+  margin: 1em 0;
+  display: flex;
+  align-items: center;
+}
+
+.bottom_nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+
+/* Apply styles to anchor tags */
+li a {
+  text-decoration: none; /* Remove underline */
+  color: black;
+  font-family: "ProximaNovaBold", sans-serif;
+  font-size: 14px;
+  padding: 0 15px;
+  margin: 0 55px;
+  position: relative;
+  transition: color 0.5s ease; /* Smooth transition for the color */
+  margin-top: -20px;
+}
+
+/* Style when hovering over anchor tags */
+li a:hover {
+  color: crimson; /* Change text color to crimson */
+  text-decoration: none;
+}
+
+/* Create the line effect */
+li a::before {
+  content: "";
+  position: absolute;
+
+  bottom: -3px; /* Adjust this value to align the line properly */
+  left: 0;
+  width: 0;
+  height: 7px;
+
+  background-image: linear-gradient(to bottom, transparent, #f7d4d4);
+  transition: width 0.5s ease; /* Smooth transition for the width */
+}
+
+/* Expand the line when hovering over the anchor tags */
+li a:hover::before {
+  width: 100%;
+}
+
+.dropdown {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin-left: 700px;
+  margin-top: 395px;
+  padding-left: 2px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  z-index: 1;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px 0px #e6e6e6;
+}
+
+.dropdown-item {
+  padding: 10px;
+  margin-left: -30px;
+  cursor: pointer;
+}
+.dropdown-item:hover {
+  background-color: transparent !important;
+}
+
+/* Apply styles to anchor tags */
+div a {
+  text-decoration: none; /* Remove underline */
+  color: black;
+  font-size: 13px;
+  padding: 0 5px;
+  margin: 0 25px;
+  position: relative;
+  transition: color 0.5s ease; /* Smooth transition for the color */
+}
+
+/* Style when hovering over anchor tags */
+div a:hover {
+  color: crimson; /* Change text color to crimson */
+  text-decoration: none;
+}
+
+/* Create the line effect */
+div a::before {
+  content: "";
+  position: absolute;
+
+  bottom: -3px; /* Adjust this value to align the line properly */
+  left: 0;
+  width: 0;
+  height: 7px;
+
+  background-image: linear-gradient(to bottom, transparent, #f7d4d4);
+  transition: width 0.5s ease; /* Smooth transition for the width */
+}
+
+/* Expand the line when hovering over the anchor tags */
+div a:hover::before {
+  width: 100%;
+}
+
+.ex-dropdown {
+  position: relative;
+  background-color: #5e9400;
+  font-size: 12px;
+  font-weight: 800;
+  color: white;
+  border-radius: 5px;
+  width: 120px;
+  height: 35px;
+  padding: 0 1em;
+}
+
+.shop-by {
+  font-size: 8px;
+  font-weight: normal;
+}
+
+.triangle-down {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #5e9400; /* Same color as the background of the parent */
+}
+
+.dropdown-icon {
+  position: absolute;
+  top: 50%;
+  right: 5px; /* Adjust as needed */
+  transform: translateY(-50%);
+  border-radius: 50%;
+  width: 8px;
+}
+
+.shop-by {
+  font-size: 8px;
+  font-weight: normal;
+}
+
+.dropdown-icon {
+  position: absolute;
+  top: 50%;
+  right: 5px; /* Adjust as needed */
+  transform: translateY(-50%);
+  border-radius: 50%;
+  width: 8px;
+}
+
+.category-container {
+  color: white !important;
+  width: max-content;
+  background: #fff;
+  display: flex;
+  scale: 0;
+  flex-direction: column;
+  border-radius: 6px;
+  overflow: hidden;
+  font-weight: 400;
+  transition: all 500ms;
+  transform-origin: top left;
+}
+
+.category-container ul {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.category-container ul:nth-child(1) {
+  background: #202020;
+  color: #fff;
+}
+
+.category-container ul:nth-child(2) {
+  background: #eeeeee;
+}
+.category-container ul:nth-child(3) {
+  background: #fff;
+}
+
+.category-container ul li {
+  margin: 0.25em 0;
+  padding: 8px 10px;
+  width: 180px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.category-container ul:nth-child(1) li:hover {
+  background: #404040;
+}
+
+.category-container ul:nth-child(2) li:hover {
+  background: #fff;
+}
+
+.category-container ul:nth-child(3) li:hover {
+  background: #eee;
+}
+
+.container2 {
+  width: 192px;
+  height: 493px;
+  overflow: hidden;
+  position: relative;
+}
+
+.content2 {
+  height: 1086px; /* This is the full height of your content */
+}
+
+.content2.slide-up {
+  transition: transform 0.5s ease;
+  transform: translateY(-50%);
+}
+
+button {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.dropdown-contents {
+  position: absolute;
+  margin-left: 595px;
+  margin-top: 200px;
+  z-index: 1;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+
+  border-radius: 5px;
+}
+
+.dropdown-items {
+  padding: 10px;
+}
+
+.search {
+  position: relative;
+  align-items: center;
+}
+
+.search-input {
+  font: inherit;
+  height: 100%;
+  min-width: 500px;
+  font-size: 0.75rem;
+  padding: 0.5rem;
+  padding-left: 2rem;
+  border: 1px solid #d5d5d5;
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+
+.search-logo {
+  position: absolute;
+  width: 1.2rem;
+  padding: 0.2rem;
+  left: 0.5rem;
+}
+
+.search-inputs {
+  font: inherit;
+  height: 100%;
+  min-width: 240px;
+  font-size: 0.75rem;
+  padding: 0.5rem;
+  padding-left: 2rem;
+  border: 1px solid #d5d5d5;
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+
+.bottom-element {
+  position: absolute;
+  bottom: 0;
+  padding: 5px;
+  border-color: #fff;
+  border-width: 25px;
+  /* Add any necessary styling for your bottom element */
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 999; /* Ensure it's above other content */
+}
+
+/* CSS for the modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10000; /* Ensure the modal is on top */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 530px;
+  height: 300px;
+  background-color: white;
+  padding: 20px;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content {
+  width: 100%;
+  height: 100%;
+}
+
+/* Close button style */
+#closeButton {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 10001; /* Ensure the close button is above the modal */
+}
+.btn-crimson {
+  background-color: crimson;
+  border-color: crimson;
+  color: white; /* Text color */
+}
+
+.my-smart-basket {
+  padding: 50px;
+  background-color: #d5d5d5;
+  height: 560px;
+}
+.cntr2 {
+  display: flex;
+}
+
+/* .surfer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 2em;
+    overflow: hidden;
+    height: 70vh;
+    width: 100%;
+    background-color: #f7f7f7;
+    
+    .surfer-top {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 2em;
+        height: fit-content;
+        line-height: 10px;
+        justify-content: space-between;
+    }   
+    .scroller-container {
+        overflow-x: auto;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        .surfer-scroller {
+            position: absolute;
+            margin-bottom: auto;
+            bottom: 2em;
+            margin-left: 2em;
+            display: grid;
+            grid-auto-flow: column;
+            gap: 1em;
+            .surfer-card {
+                height: 40vh;
+                background-color: blue;
+                width: 20vw;
+            }
+        }
+    }
+} */
+
+.surfer {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  margin-top: 2em;
+  height: 100vh;
+  width: 100%;
+  background-color: #f7f7f7;
+  padding-top: revert;
+  border-radius: 5px;
+
+
+  .surfer-top {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2em;
+    height: fit-content;
+    line-height: 10px;
+    padding-top: 25px;
+    margin-top: 10  px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .surfer-scroller {
+    scroll-behavior: smooth;
+    position: relative;
+    width: 100%;
+    padding: 1em;
+  
+    background-color: white;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1em;
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .surfer-card {
+        height: 100%;
+        width: 16vw;
+        background-color: black;
+    }
+  }
+}
+
+
+.surfer1 {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  margin-top: 2em;
+  height: 100vh;
+  width: 100%;
+  background-color: #f7f7f7;
+  padding-top: revert;
+  border-radius: 5px;
+
+
+  .surfer-top {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2em;
+    height: fit-content;
+    line-height: 10px;
+    padding-top: 25px;
+    margin-top: 10  px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .surfer-scroller1 {
+    scroll-behavior: smooth;
+    position: relative;
+    width: 100%;
+    padding: 1em;
+  
+    background-color: white;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1em;
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .surfer-card {
+        height: 100%;
+        width: 16vw;
+        background-color: black;
+    }
+  }
+}

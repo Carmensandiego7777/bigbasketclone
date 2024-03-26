@@ -1,0 +1,346 @@
+*{text-decoration:none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'ProximaNovaBold';
+    src:  
+         url('https://www.bbassets.com/bb2assets/fonts/ProximaNovaRegular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova';
+    src:  
+         url('https://www.bbassets.com/bb2assets/fonts/ProximaNovaSemibold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.base-img{
+    padding-top: 28px;
+}
+
+.tags img {
+    width: 15%;
+}
+
+.box-container {
+    display: flex;
+    
+    gap: 1.5rem;
+}
+.maker {
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(236, 236, 236); /* Increased blur radius */
+}
+
+.maker:hover {
+    box-shadow: 0px 10px 20px 10px rgba(236, 236, 236); /* Increased blur radius */
+}
+
+.slideshow-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px 5px rgba(236, 236, 236);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    height: auto;
+}
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    z-index: 100;
+    width: 30px; /* Adjust as needed */
+    height: 30px; /* Adjust as needed */
+    background-color: #79737b; /* Circle background color */
+    border-radius: 50%; /* Make it circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Arrow color */
+    transition: background-color 0.3s; /* Transition for hover effect */
+    border: 1px solid white; /* Add white border */
+}
+
+.prev:hover,
+.next:hover {
+    background-color: black; /* Change circle color on hover */
+}
+
+
+.prev {
+    left: 10px; /* Adjust distance from the left edge */
+}
+
+.next {
+    right: 10px; /* Adjust distance from the right edge */
+}
+.text-body,
+.fon-style {
+    font-weight: 400;
+    font-size: 13px;
+    font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+    color: #847e75;
+    line-height: 1.4; /* Adjust line-height */
+    letter-spacing: 0.3px; /* Increase letter spacing */
+}
+
+
+.radio-buttons-container {
+    width: 101px;
+    height: 22px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    background-color: #79737b;
+    border-radius: 20px;
+}
+
+.radio-buttons-container input[type="radio"] {
+    
+    margin-left: 12px;
+    padding-left: 5px;
+    appearance: none;
+    width: 8px; /* Normal state diameter */
+    height: 8px; /* Normal state diameter */
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: #fff;
+    transition: width 0.3s ease, height 0.3s ease; /* Add transitions for size change */
+}
+
+/* Increase size when hovered or checked */
+.radio-buttons-container input[type="radio"]:hover,
+.radio-buttons-container input[type="radio"]:checked {
+    width: 16px; /* Highlighted state diameter */
+    height: 16px; /* Highlighted state diameter */
+}
+
+.extra{
+    align-items: center;
+}
+
+.hyphen-line {
+    text-align: center;
+  }
+  .hyphen-line::before {
+    content: "";
+    display: block;
+    border-bottom: 1px dashed black; /* Adjust color and thickness as needed */
+    width: 100%; /* Adjust width as needed */
+    margin: 0 auto; /* Center the line horizontally */
+  }
+
+.row{
+    width:100%;
+    margin:auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:flex-start;
+    justify-content: space-between;
+    
+}
+
+  .col{
+    flex-basis: 25%;
+    padding: 10px;
+  }
+
+  .row,
+  .col{
+    color:white;
+    font-size: 13px;
+    line-height: 21px;
+  }
+
+
+
+.image-container {
+    padding-top: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.hover-image {
+    margin-top: 0px;
+    display: none;
+    position: absolute;
+    width: 239px;
+    top: 0;
+    left: 0;
+}
+
+.image-container:hover .hover-image {
+    display: block;
+    padding-top: 30px;
+}
+
+.image-container:hover .default-image {
+    display: none;
+}
+
+
+    
+  .space{
+    padding-top: 55px;
+  }
+
+  .box-containers {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.boxs {
+    width: 240px;
+    position: relative;
+    display: inline-block;
+    padding-top: 30px;
+    transition: all 1s ease;
+}
+
+.tagss .hover-image {
+    margin-top: 0;
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0; /* Initially hide the hover image */
+    transition: opacity 0.5s ease;
+}
+
+.tagss:hover .hover-image {
+    display: block;
+    padding-top: 30px;
+    opacity: 1;
+}
+
+.tagss:hover .default-image {
+    display: none;
+    opacity: 0;
+}
+
+.maker1 {
+    transition: filter 0.5s ease; /* Adding transition for filter property */
+    border-radius: 3px;
+    
+}
+
+.maker1:hover {
+    filter: invert(100%); /* Inverting the image on hover */
+    border-radius: 3px;
+}
+
+.load-div {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+.loading {
+    height: 5px;
+    background-color: #5e9400;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: width 0.5s, transform 0.5s ease;
+}
+
+.container1 {
+    display: flex;
+    width: 100%;
+  }
+  
+  .column1 {
+    flex: 1;
+    margin: 0 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 5px;
+    color: #d0cab6;
+  }
+  .hidden {
+    display: none; /* Hide extra list items initially */
+  }
+
+  .show-more {
+    color: #d0cab6;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.show-more:hover {
+    text-decoration: none;
+}
+
+.container1 ul li {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.container1 ul li:hover {
+    text-decoration: underline;
+}
+
+.row.space .col p {
+    cursor: pointer;
+    color:#d0cab6;
+    text-decoration: none;
+}
+
+.row.space .col p:hover {
+    text-decoration: underline;
+}
+#copyrights {
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 13px;}
+
+
+    .cntr1 {
+        position: relative;
+        width: 100%;
+        background-color: #f7f7f7;
+        overflow: hidden;
+        padding: 1rem;
+    }
+    
+    .chead {
+        justify-content: space-between;
+        position: relative;
+        height: 2.3rem;
+        margin: 1rem;
+    }
+    
+    .prev-btn:hover,
+    .next-btn:hover {
+        border: 1px solid black;
+    }
+    
+
+

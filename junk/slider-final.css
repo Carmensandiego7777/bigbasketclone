@@ -1,0 +1,319 @@
+.cntr1 {
+    position: relative;
+    width: 100%;
+    background-color: #f7f7f7;
+    overflow: hidden;
+    padding: 1rem;
+}
+
+
+.chead {
+    justify-content: space-between;
+    position: relative;
+    height: 2.3rem;
+    margin: 1rem;
+}
+
+.smb {
+    column-gap: 1%;
+    align-items: center;
+    height: 100%;
+    width: auto;
+    column-gap: 0.5rem;
+}
+
+.smb button {
+    height: 90%;
+    width: 2rem;
+    border: none;
+    background-color: white;
+    border-radius: 0.3rem;
+    box-shadow: 0px 8px 5px rgb(0, 0, 0, 0.1);
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    border: 1px solid black;
+}
+
+
+
+.basket-cntr-main,
+.best-seller-container {
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: row;
+    height: fit-content;
+    width: 100%;
+    justify-content: space-between;
+    border-radius: 0.5rem;
+}
+
+.basket-item-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 29rem;
+    margin: 1rem 0;
+}
+
+.basket-item {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 0 0.3rem;
+    background-color: #ffffff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    height: 100%;
+    width: 13.5rem;
+    padding: 0.8rem;
+    overflow-y: hidden;
+    scroll-snap-align: start;
+    border-radius: 0.5rem;
+}
+.item-count-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    height: 7%;
+    width: 13rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0 0 0.3rem 0.3rem;
+
+    .wishlist {
+        border: none;
+        border-radius: 0.1rem;
+        border: 1px solid #d9d9d9;
+        background-color: white;
+        height: 1.8rem;
+        width: 1.5rem;
+    }
+
+    .add-items-button-container {
+        display: flex;
+        align-items: center;
+        width: 80%;
+        height: 1.8rem;
+        .add-items {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            border: none;
+            border: 1px solid #cc0001;
+            color: #cc0001;
+            background-color: white;
+            border-radius: 0.2rem;
+            font-size: small;
+            font-weight: bold;
+        }
+        .add-items:hover {
+            background-color: #cc0001;
+            color: #ffffff;
+        }
+        .additional-button-container {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .additional-button-container-new {
+            display: flex;
+            height: inherit;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            border: 2px solid #cc0001;
+            opacity: 100;
+            .add-product,
+            .remove-product {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                width: 33%;
+                border: 1px solid #cc0001;
+                background-color: #cc0001;
+                color: #ffffff;
+                font-size: 1.3rem;
+            }
+            p {
+                margin: 0;
+                font-size: 0.8rem;
+                color: #cc0001;
+            }
+        }
+    }
+}
+
+.basket-item::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+}
+
+.basket-item-image-container {
+    position: relative;
+    border-radius: 0.5rem;
+    border: solid 0.1rem #f4f4f4;
+    /* min-width: max-content; */
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.basket-item-image {
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+}
+
+.basket-item-discount {
+    top: 0;
+    position: absolute;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.4rem 0.6rem;
+    background-color: #476f00;
+    color: white;
+    border-radius: 0.5rem 0;
+    font-size: 0.6rem;
+}
+
+.basket-item-image-type-cntr {
+    width: fit-content;
+    padding: 0.15rem;
+    border: solid 1px green;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+}
+
+.basket-item-image-type {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: rgb(29, 158, 29);
+    border-radius: 50%;
+}
+
+.basket-item-detail-container {
+    margin-block: 2rem;
+}
+
+.basket-item-detail-brand {
+    font-size: 0.8rem;
+    color: grey;
+    margin: 0;
+}
+
+.basket-item-detail-name {
+    overflow: hidden;
+    height: 3rem;
+    margin: 0;
+}
+
+.basket-item-detail-quantity {
+    width: 100%;
+    border-radius: 0.2rem;
+    font-size: 0.75rem;
+    padding: 0.3rem;
+    border: solid 1px gray;
+    opacity: 70%;
+    background-color: #ffffff;
+}
+
+.basket-item-offer-button {
+    display: flex;
+    background: linear-gradient(to right, white, #f08b8b);
+    border-radius: 0.2rem;
+    border: 1px solid #f31717;
+    color: #f31717;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+
+.basket-item-offer-button p {
+    margin: 0;
+    padding: 0.2rem;
+}
+
+.basket-item-detail-price-cntr {
+    height: min-content;
+    margin: 0;
+}
+
+.basket-item-quantity-discount-price {
+    font-size: 0.75rem;
+    text-decoration: line-through;
+    color: #676767;
+}
+
+.basket-item-scroll-detail {
+    transition: all 1s ease;
+    display: none;
+}
+
+.basket-item-scroll-container {
+    position: relative;
+    height: fit-content;
+    background: linear-gradient(#ffffff, #f08b8b);
+    font-size: 0.9rem;
+    border-radius: 1rem;
+    /* padding: 15% 0; */
+}
+
+.basket-item-scroll-function {
+    display: flex;
+    position: relative;
+    height: 2.5rem;
+}
+
+.basket-item-scroll-container-back {
+    position: absolute;
+    background-color: grey;
+    right: 5%;
+    border-radius: 50%;
+    border: none;
+    opacity: 70%;
+}
+
+.basket-item-scroll-container-img {
+    position: absolute;
+    left: 10%;
+}
+
+.basket-item-add-button {
+    height: 2rem;
+}
+
+.getItem {
+    padding: 10%;
+    margin-bottom: 1.5rem;
+}
+.supersaverAnimation {
+    display: flex;
+    background-color: #f31717;
+    color: white;
+    height: 1.5rem;
+    width: 10%;
+    border-radius: 0 0.3rem 0.3rem 0;
+    align-items: center;
+    transition: width 1s ease;
+}
+
+.supersaverAnimationWidth {
+    width: 95%;
+}
+
+.supersaverAnimation p {
+    padding: 0.2rem;
+    margin: 0;
+    height: fit-content;
+}

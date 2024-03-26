@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="<KEY>" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="slideshow-container">
+        <div class="slides">
+            <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_m_babycare_250923_400.jpg?tr=w-1920,q=80" alt="Slide 1">
+            <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_m_petstore_250923_400.jpg?tr=w-1920,q=80" alt="Slide 2">
+            <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_bcd_m_bcd_250923_400.jpg?tr=w-1920,q=80" alt="Slide 3">
+            <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_m_health_suppliment_250923_400.jpg?tr=w-1920,q=80" alt="Slide 4">
+        </div>
+        <div class="radio-buttons-container">
+            <input type="radio" name="radio-btn" id="radio1" checked>
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+        </div>
+        <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+        </div>
+        <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+        <a class="next" onclick="moveSlide(1)">&#10095;</a>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
